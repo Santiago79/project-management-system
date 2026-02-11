@@ -23,7 +23,7 @@ class Task:
     strategy: PriorityStrategy
     due_date: date | None = None
     id: str = field(default_factory=lambda: str(uuid4()))
-    _status: TaskStatus = field(default_factory=TaskStatus.TODO)
+    _status: TaskStatus = TaskStatus.TODO
 
     def __post_init__(self) -> None:
         if not self.title or len(self.title.strip()) < 5:

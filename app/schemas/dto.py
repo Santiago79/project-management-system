@@ -10,7 +10,7 @@ class ProjectOut(BaseModel):
     name: str
 
 class TaskCreate(BaseModel):
-    title: str = Field(min_legth = 5)
+    title: str = Field(min_length = 5)
     task_type: str = Field(pattern='^(bug|feature|chore)$')
     due_date: date | None
 
